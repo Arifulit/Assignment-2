@@ -140,11 +140,11 @@ section {
    /* border: 2px solid yellow; */
   /* align-items: center; */
   position: absolute;
-  padding-bottom: 80px;
+  padding: 10px;
   width: 1060px;
-height: 46px;
+  height: 46px;
 /* left: 190px; */
-top: 57px;
+  /* top:32px; */
 }
 
 .italic {
@@ -195,6 +195,7 @@ nav ul li a {
 .hero-section {
   display: flex;
   width: 100%;
+  padding-left: 100px;
   /* height: 100vh; */
   /* border: 2px solid red; */
   /* position: relative; */
@@ -231,6 +232,7 @@ color: white;
   margin-bottom: 30px;
   width: 457px;
   color: white;
+
 }
 
 
@@ -265,6 +267,7 @@ top: 0px;
 /* Achievement Cards */
 
 .achievement-cards {
+  position:relative;
   /* background-color: #333; */
 }
 
@@ -293,22 +296,23 @@ top: 0px;
 }
 
 .achievement-card.free-workout {
+  position: absolute;
   width: 193px;
   height: 98px;
-  left: 1450px;
-  top: 220px;
+  left: 440px;
+  top: -420px;
   align-items: center;
   justify-content: center;
   /* background: rgba(255, 255, 255, 0.1); */
 }
 
 .achievement-card.video-tutorial {
-  /* display: flex;
-  position: absolute; */
+  /* display: flex; */
+  position: absolute; 
   width: 206px;
   height: 96px;
-  left: 1064px;
-  top: 456px;
+  left: 100px;
+  top: -150px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -394,7 +398,9 @@ section p {
   color: white;
   display: none;
 } */
-
+.ham-burger {
+  display: none;
+}
 
 .habit {
   /* background: #ba6a6a; */
@@ -429,8 +435,8 @@ left: 198px;
 .content p {
   font-weight: 400;
   font-size: 14px; 
-   color:rgba(255, 255, 255, 0.5); */
-   color: white;
+   color:rgba(255, 255, 255, 0.5); 
+   
 }
 
 
@@ -517,6 +523,9 @@ left: 198px;
   top: 40px;
   bottom: 30px;
   border-radius: 18px;
+  object-fit: none;
+ object-position: 65% 28%;
+  
 }
 
 .container {
@@ -567,25 +576,50 @@ left: 198px;
   display: none;
 }
 
+.bmi-section{
+  /* background: rgb(34, 34, 34); */
+  width: 1440px;
+  height: auto;
+  /* border: 2px solid  yellowgreen; */
+  margin-top: -100px;
+}
+
 .calculator-section{
   background: rgb(34, 34, 34);
   display: flex;
   width: 1440px;
 height: 487px;
-padding: 100px;
+padding-top: 50px;
+padding-left: 180px;
 margin: 0 auto;
+gap: 100px;
+margin-top: 100px;
 }
 
 .calculator-content{
      color: white;
      width: 671px;
+     margin: 0 auto;
     height: 120px;
 /* Auto layout */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-align-items: center;
+  justify-content: flex-start;
+align-items: flex-start;
 
+
+}
+.calculator-text{
+  display: flex;
+  flex-direction: column;
+  
+
+  /* text-align: left; */
+}
+
+.calculator-text p{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
 }
 .calculator-content h1{
   font-family: Inter;
@@ -614,9 +648,17 @@ right: 941px;
 
 .calculator-chart table th, td{
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.1)
 }
 
+.calculator-bmi{
+  
+width: 577px;
+height: 386px;
+left: 674px;
+top: -100px;
+
+}
 .calculator-bmi h1{
   font-family: Inter;
   font-size: 28px;
@@ -791,15 +833,109 @@ text-align: center;
 
 
 
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  /* color: #333; */
+}
+.form :where(.input-box input, .select-box, .male) {
+  position: relative;
+  height: 50px;
+  width: 50%;
+  outline: none;
+  font-size: 1rem;
+  /* color: #707070; */
+  margin-top: 8px;
+  border: 1px solid #9a9090;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.address :where(input, .select-box, .male) {
+  margin-top: 15px;
+}
+.select-box select {
+  width: 577px;
+height: 48px;
+justify-content: space-between;
+align-items: center;
+padding: 12px 20px 12px 20px;
+  /* color: #707070; */
+  font-size: 1rem;
+  border-radius: .5rem;
+}
+
+.column input{
+  width: 282.5px;
+height: 48px;
+align-items: center;
+padding: 12px 40px 12px 20px;
+border-radius: 0.5rem;
+background-color: #444;
+
+}
+
+ .column .select-box select,.male select,.column input{
+  background-color: #444;
+  color: rgba(255, 255, 255, 0.6);
+ }
+  
+.column .select-box{
+  margin-bottom: 20px;
+  }
+
+  .address{
+    /* padding: 20px; */
+  }
+.column .male select{
+  width: 282.5px;
+  height: 48px;
+  align-items: center;
+  padding: 12px 40px 12px 20px;
+  border-radius: 0.5rem;
+}
+.age{
+  display: flex;
+  gap: 6px;
+  
+  /* background: rgba(255, 255, 255, 0.1); */
+}
+
+/*Responsive*/
+
+
+
 
 
 
 @media screen and (max-width: 576px) {
 
+  .nav-links{
+    display: none;
+  }
+
+  .ham-burger{
+     display: block;
+     color: white;
+  }
+  .ham-burger i{
+    font-size: 30px;
+  }
   .hero-section {
       
     flex-direction: column;
   }
+
+
   .achievement-card{
     position: absolute;
     width: 155.74px;
@@ -823,4 +959,5 @@ height: 170px;
 left: 33px;
 top: 326px;
   }
+
 }
